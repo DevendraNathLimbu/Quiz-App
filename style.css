@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body .home{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+p{
+    font-size: 5pc;
+    color: #333;
+}
+
+.start{
+    font-size: 3pc;
+    margin-top: 25px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 4px 4px 2px rgba(29, 187, 76, 0.25);
+}
+.start:hover{
+    background-color: #218838;
+    cursor: pointer;
+}
+.start:active{
+    box-shadow: 2px 2px 1px rgba(29, 187, 76, 0.25);
+    transform: translate(0.5px, 0.5px);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30%;
+      background-color: #cce2c2;
+}
+.container main{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+main header{
+    min-height: 120px;
+    width: 100%;
+}
+header h2{
+    font-size: 2pc;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+header i{
+    float: right;
+    margin-right: 30px;
+    cursor: pointer;
+}
+header .count{
+    font-size: 1.5pc;
+    float: right;
+    color: #333;
+    margin-right: -20px;
+    margin-top: 35px;
+    background: orange;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+main .qn{
+    width: 100%;
+    min-height: 150px;
+}
+.qn .ask{
+    height: 60px;
+    width: 100%;
+    background: aliceblue;
+    line-height: 60px;
+    font-size: 1.5pc;
+    padding-left: 20px;
+    border-radius: 8px;
+}
+.qn .timer{
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+    background: #28a745;
+    font-size: 1.5pc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.ans{
+    width: 100%;
+    min-height: 200px
+}
+.ans ul{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+     padding-top: 10px;
+     border-radius: 8px;
+     padding: 10px;
+}
+ ul li{
+    list-style: none;
+    line-height: 50px;
+    background: #fefefe;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    padding-left: 10px;
+    font-size: 1.5pc;
+    cursor: pointer;
+ }
+ ul li:nth-child(4){
+    margin-bottom: 0;
+ }
+ ul li:hover{
+    background: #e0f7e0;
+    border-color: #28a745;
+ }
+ .ans .nxt{
+    float: right;
+    margin: 20px;
+    color: green;
+    font-size: 1.2pc;
+    font-weight: bold;
+    cursor: pointer;
+ }
+ .ans .nxt:hover{
+    color: darkgreen;
+ }
+ main .last{
+    height: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+ }
+ main .last h6{
+    font-size: 0.8pc;
+    
+ }
