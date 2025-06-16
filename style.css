@@ -154,3 +154,36 @@ main .qn{
     font-size: 0.8pc;
     
  }
+
+/* Responsive For Mobile devices */
+@media (max-width: 768px) {
+    p{
+        font-size: 3pc;
+    }
+    .start{
+        font-size: 2.3pc;
+    }
+    .container{
+        padding: 0 10%;
+    }
+    header h2{
+        font-size: 1.5pc;
+    }
+    header .count{
+        font-size: 1.2pc;
+    }
+    .qn .ask{
+        font-size: 1.2pc;
+    }
+    .qn .timer{
+        font-size: 1.2pc;
+    }
+    ul li{
+        font-size: 1.2pc;
+    }
+}
+@media (max-width: 600px){
+    .container{
+        height: 93vh;
+    }
+}
