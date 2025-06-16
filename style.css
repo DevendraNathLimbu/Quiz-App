@@ -3,7 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 body .home{
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -11,7 +16,8 @@ body .home{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 p{
     font-size: 5pc;
@@ -82,7 +88,6 @@ main .qn{
     min-height: 150px;
 }
 .qn .ask{
-    height: 60px;
     width: 100%;
     background: aliceblue;
     line-height: 60px;
@@ -123,14 +128,30 @@ main .qn{
     font-size: 1.5pc;
     cursor: pointer;
  }
+ ul .disabled{
+    pointer-events: none;
+    opacity: 0.9;
+ }
  ul li:nth-child(4){
     margin-bottom: 0;
  }
  ul li:hover{
+    background: #eee;
+    border-color: #181818;
+ }
+ .correct{
     background: #e0f7e0;
     border-color: #28a745;
  }
- .ans .nxt{
+ .wrong{
+    background: #f7e0e5;
+    border-color: #a72828;
+ }
+ li span{
+    float: right;
+    margin-right: 20px;
+ }
+ .ans .next{
     float: right;
     margin: 20px;
     color: green;
@@ -138,7 +159,7 @@ main .qn{
     font-weight: bold;
     cursor: pointer;
  }
- .ans .nxt:hover{
+ .ans .next:hover{
     color: darkgreen;
  }
  main .last{
@@ -186,4 +207,50 @@ main .qn{
     .container{
         height: 93vh;
     }
+}
+
+.final{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.result{
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 8px;
+    background: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.result h3{
+    font-size: 1.8pc;
+    
+}
+.result p{
+    font-size: 1.3pc;
+    margin-top: 40px;
+}
+.result button{
+    font-size: 1.3pc;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: #22ae1a;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 4px 4px 2px rgba(29, 187, 76, 0.25);
+    margin-top: 50px;
+    cursor: pointer;
+}
+.result button a{
+    color: white;
+    text-decoration: none;
 }
