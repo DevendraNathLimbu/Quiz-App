@@ -204,8 +204,21 @@ main .qn{
     }
 }
 @media (max-width: 600px){
-    .container{
+    body{
         height: 93vh;
+    }
+    .container{
+        height: 100%;
+    }
+    .qn{
+        min-height: 100px;
+    }
+    .qn .ask{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 1.1pc;
+        margin: 0;
+        line-height: 30px;
     }
 }
 
@@ -276,4 +289,32 @@ main .qn{
 .result button a{
     color: white;
     text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .final h2{
+        font-size: 2pc;
+    }
+    .final .progress{
+        width: 90%;
+    }
+    .final .progress .mark{
+        font-size: 1.2pc;
+    }
+    .result{
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+    .result h3{
+        font-size: 1.5pc;
+    }
+    .result p{
+        font-size: 1.2pc;
+        text-align: center;
+    }
+    .result button{
+        font-size: 1.2pc;
+    }
+    
 }
