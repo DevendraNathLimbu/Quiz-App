@@ -19,40 +19,95 @@ i.addEventListener('click', () => {
 
 const qna = [
     {
-        question: "What is the capital of France?",
+        question: "Which of the following is HEX color code for white?",
         answers: [
-            { text: "Berlin", correct: false },
-            { text: "Madrid", correct: false },
-            { text: "Paris", correct: true },
-            { text: "Rome", correct: false }
+            { text: "rgb(255,255,255)", correct: false },
+            { text: "#000", correct: false },
+            { text: "#FFF", correct: true },
+            { text: "white", correct: false }
         ]
     },
     {
-        question: "What is 2 + 2?",
+        question: "Which one is not a valid CSS unit?",
         answers: [
-            { text: "3", correct: false },
-            { text: "4", correct: true },
-            { text: "5", correct: false },
-            { text: "6", correct: false }
+            { text: "px", correct: false },
+            { text: "xc", correct: true },
+            { text: "em", correct: false },
+            { text: "%", correct: false }
         ]
     }
     ,
      {
-        question: "What is 2 + 2?",
+        question: "What is the default value of the CSS 'position' property?",
         answers: [
-            { text: "3", correct: false },
-            { text: "4", correct: true },
-            { text: "5", correct: false },
-            { text: "6", correct: false }
+            { text: "fixed", correct: false },
+            { text: "static", correct: true },
+            { text: "relative", correct: false },
+            { text: "absolute", correct: false }
         ]
     },
      {
-        question: "What is 2 + 2?",
+        question: "Which of the following is used to select an element with a specific class in CSS?",
         answers: [
-            { text: "3", correct: false },
-            { text: "4", correct: true },
-            { text: "5", correct: false },
-            { text: "6", correct: false }
+            { text: ".className", correct: true },
+            { text: "#className", correct: false },
+            { text: "[className]", correct: false },
+            { text: "~className", correct: false }
+        ]
+    },
+     {
+        question: "Which of the following is not a loop?",
+        answers: [
+            { text: "for loop", correct: false },
+            { text: "do while", correct: false },
+            { text: "while", correct: false },
+            { text: "if else", correct: true }
+        ]
+    }
+    ,
+     {
+        question: "What is the correct syntax for creating a function in JavaScript?",
+        answers: [
+            { text: "functionName(){...}", correct: false },
+            { text: "(){...}", correct: false },
+            { text: "function name(){...}", correct: true },
+            { text: "function {...}", correct: false }
+        ]
+    },
+     {
+        question: "Which is the correct syntax of javaScript to generate random number?",
+        answers: [
+            { text: "Math.random()", correct: true },
+            { text: "Math.rand()", correct: false },
+            { text: "math.random()", correct: false },
+            { text: "random()", correct: false }
+        ]
+    },
+     {
+        question: "Which is not the keyword in JavaScript?",
+        answers: [
+            { text: "break", correct: false },
+            { text: "true", correct: false },
+            { text: "function", correct: false },
+            { text: "call", correct: true }
+        ]
+    },
+     {
+        question: "How many primitive data types are there in JavaScript?",
+        answers: [
+            { text: "6", correct: false },
+            { text: "7", correct: true },
+            { text: "4", correct: false },
+            { text: "5", correct: false }
+        ]
+    },
+     {
+        question: "What is the output of : console.log(typeof null);",
+        answers: [
+            { text: "object", correct: true },
+            { text: "null", correct: false },
+            { text: "undefined", correct: false },
+            { text: "string", correct: false }
         ]
     }
 ];
@@ -100,15 +155,15 @@ let ans = answers.querySelectorAll('li');
     let timeCount = 30;
         timer = ()=>{
         let id = setInterval(()=>{
-            timeCount--;
             time.innerHTML = '00:'+ timeCount;
-           if(timeCount<=15 && timeCount>5){
+            timeCount--;
+           if(timeCount<=14 && timeCount>4){
              container.style.background = 'rgba(200, 170, 0, 0.25)';
            }
-           else if(timeCount<=5 && timeCount>0){
+           else if(timeCount<=4 && timeCount>-1){
              container.style.background = 'rgba(255, 0, 0, 0.3)';
            }
-           else if(timeCount==0){
+           else if(timeCount==-1){
             clearInterval(id);
             disable();
             alert('Time is up!');
