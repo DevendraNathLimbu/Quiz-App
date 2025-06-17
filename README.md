@@ -5,3 +5,7 @@ The project is officially coded by Devendra Nath Limbu from scratch using HTML, 
 Live Demo : 
 
 ![image alt](https://github.com/DevendraNathLimbu/Quiz-App/blob/9033ebc78f18f2c57f8c7ada543a990c2312fdcf/quiz_home.png)
+
+Here is the desgin of this project.
+
+![image alt](https://github.com/DevendraNathLimbu/Quiz-App/blob/aa49c7a64036fdd7117d775bb17947d294727f1c/quiz_qna.png)
