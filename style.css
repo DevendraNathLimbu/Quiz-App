@@ -218,7 +218,30 @@ main .qn{
     align-items: center;
     justify-content: center;
 }
-
+.final h2{
+    font-size: 2.5pc;
+    color: #111;
+    margin-bottom: 40px;
+}
+.final .progress{
+    height: 30px;
+    width: 80%;
+    background: #ddd;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.final .progress .mark{
+    height: 100%;
+    width: 60%;
+    background: #28a745;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5pc;
+}
 .result{
     position: absolute;
     height: 500px;

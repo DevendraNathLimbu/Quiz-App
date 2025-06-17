@@ -6,10 +6,12 @@ i.addEventListener('click', () => {
    if(i.classList.contains('fa-volume-high')) {
         i.classList.remove('fa-volume-high');
         i.classList.add('fa-volume-xmark');
+        muteAudio();
    }
    else {
         i.classList.remove('fa-volume-xmark');
         i.classList.add('fa-volume-high');
+        unmuteAudio();
    }
 })
 
@@ -79,6 +81,8 @@ function displayQuestion(){
 }
 displayQuestion();
 
+const container = document.querySelector('.container');
+
 function showAnswers() {
      for(let i=0; i<4; i++){
          let li = document.createElement('li');
@@ -94,7 +98,6 @@ let ans = answers.querySelectorAll('li');
 // Timer functionality
     let time = document.querySelector('.timer');
     let timeCount = 30;
-    const container = document.querySelector('.container');
         timer = ()=>{
         let id = setInterval(()=>{
             timeCount--;
@@ -106,9 +109,9 @@ let ans = answers.querySelectorAll('li');
              container.style.background = 'rgba(255, 0, 0, 0.3)';
            }
            else if(timeCount==0){
-            alert('Time is up!');
             clearInterval(id);
             disable();
+            alert('Time is up!');
            }
 
         },1000);
@@ -128,6 +131,7 @@ let ans = answers.querySelectorAll('li');
               disable();
               clearInterval(id);
               time.innerHTML = '00:'+ timeCount;
+              correctAudio();
             countResult++;
         }
         else {
@@ -139,6 +143,7 @@ let ans = answers.querySelectorAll('li');
               disable();
               clearInterval(id);
               time.innerHTML = '00:'+ timeCount;
+              wrongAudio();
         }
       });
     });
@@ -161,29 +166,68 @@ let ans = answers.querySelectorAll('li');
 
  resetForNext();
 
+//audio functionality
+
+let Correct = new Audio('correct.wav');
+let Wrong = new Audio('wrong.wav');
+let Result = new Audio('result.wav');
+
+function correctAudio() {
+    Correct.play();
+}
+
+function wrongAudio() {
+    Wrong.play();
+}
+
+function resultAudio() {
+     Result.play();
+}
+
+function muteAudio() {
+    Result.muted = true;
+    Correct.muted = true;
+    Wrong.muted = true;
+}
+function unmuteAudio() {
+    Result.muted = false;
+    Correct.muted = false;
+    Wrong.muted = false;
+}
+
     // Next question functionality
 
 const result = document.querySelector('.final');
 const h3 = document.querySelector('.result h3');
 const resultShow = document.querySelector('h3 span');
 const p = document.querySelector('.result p');
+const progress = document.querySelector('.mark');
+ const mark = document.querySelector('#mark');
 
    function next(){
      const next = document.querySelector('.next');
     next.addEventListener('click', () => {
         if(answerCount > compareAnsCount){
+             let showResult = countResult * 10;
              if(currentQuestionIndex < qna.length){
             answers.innerHTML = '';  
+             container.style.background = '#cce2c2';
             displayQuestion();
             resetForNext();
         }
         else {
           if(countResult == qna.length){
+            resultAudio();
+            progress.style.width = `${showResult}%`;
+            mark.innerHTML = showResult + '%';
               resultShow.innerHTML = countResult;
            result.style.display = 'flex';
            p.innerHTML = 'Congratulations! You answered all questions correctly.';
           }
           else{
+            resultAudio();
+            progress.style.width = `${showResult}%`;
+            mark.innerHTML = showResult + '%';
               resultShow.innerHTML = countResult;
            result.style.display = 'flex';
           }
