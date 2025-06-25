@@ -19,7 +19,7 @@ A simple and interactive Quiz App built using **HTML**, **CSS**, and **JavaScrip
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/quiz-app.git
+   https://github.com/DevendraNathLimbu/Quiz-App
    
 ## 🎯 Purpose
 This project was built for learning and practice purposes — to improve JavaScript logic, DOM manipulation, and working with timers and events.
