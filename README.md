@@ -26,7 +26,7 @@ This project was built for learning and practice purposes — to improve JavaScr
   
   Live Demo : https://quizapp777.netlify.app/
 
-  Here is the desgin of this project.
+  Here is the design of the project.
 ![image alt](https://github.com/DevendraNathLimbu/Quiz-App/blob/9033ebc78f18f2c57f8c7ada543a990c2312fdcf/quiz_home.png)
 
 
